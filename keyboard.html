@@ -9,7 +9,7 @@
 
 	<body>
 		<!-- <input class="input" maxlength="5" autofocus="autofocus" onfocus="this.select()"/> -->
-		<center><h1> Poor Man's Wordle Replica </h1></center>
+		<center><h1> Poor Man's <a href="https://www.powerlanguage.co.uk/wordle/">Wordle</a> Replica </h1></center>
 		<table id="table" class="centered">
 			<tr>
 				<td></td>
@@ -54,7 +54,14 @@
 				<td></td>
 			</tr>		
 		</table>
-		<center> <button class="button" id="restart" onClick="window.location.href=window.location.href" disabled="true">Restart</button> </center>
+		<center> 
+			<button class="button" id="restart" onClick="window.location.href=window.location.href" disabled="true">Restart</button>
+			<button class="button" id="answer" onClick="window.dialog.showModal();" disabled="true">Guessed Word</button>
+		</center>
+		<dialog id="dialog">
+			<div id="guess">Can you find the guessed Word ?</div>
+			<button onClick="window.dialog.close();">close</button>
+		</dialog>
 		<div class="simple-keyboard"></div>
 		<script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
 		<script src="keyboard.js"></script>
